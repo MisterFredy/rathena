@@ -1,0 +1,11 @@
+prontera,165,190,4	script	cashexchange	881,{
+    if ( Zeny < 1000000 ) end;
+    if( select( "Exchange Zeny to Cash","Cancel" ) == 1 ) {
+        Zeny -= 1000000;
+        #CASHPOINTS += 100;
+        dispbottom "You now have " +#CASHPOINTS+ " cash points.";
+        mes "Done";
+        close;
+    }
+    end;
+}

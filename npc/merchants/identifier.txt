@@ -1,4 +1,4 @@
-prontera,162,192,4	script	Identifier	91,{
+prontera,164,192,4	script	Identifier	91,{
 	getinventorylist;
 	for( set .@i,0; .@i < @inventorylist_count; set .@i, .@i + 1 ) {
 		if ( @inventorylist_identify[.@i] == 1 ) continue;
