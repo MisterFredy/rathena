@@ -1,11 +1,42 @@
 prontera,165,190,4	script	cashexchange	881,{
-    if ( Zeny < 1000000 ) end;
-    if( select( "Exchange Zeny to Cash","Cancel" ) == 1 ) {
-        Zeny -= 1000000;
-        #CASHPOINTS += 100;
-        dispbottom "You now have " +#CASHPOINTS+ " cash points.";
-        mes "Done";
-        close;
-    }
-    end;
+   mes "[ Money Changer ]";
+mes "Your Cash: "+#CASHPOINTS+"";
+mes "Your Zeny: "+Zeny+"";
+mes "Rate";
+mes "1 cash = 10.000z";
+switch(select("Cash to Zeny:Zeny to Cash")){
+
+	case 1:
+	input .@czamt;
+	if(.@czamt == 0) { close; }
+	next;
+	mes "[ Money Changer ]";
+	if(#CASHPOINTS < .@czamt){
+		mes "Not enough Cash!";
+		close; }
+	mes "Converting "+.@czamt+" cash to "+.@czamt*10000+"z. Continue?";
+	if(select("No:Yes") == 1) { close; }
+	next;
+	mes "[ Money Changer ]";
+	mes "Done!";
+	set Zeny,Zeny+.@czamt*10000;
+	set #CASHPOINTS,#CASHPOINTS-.@czamt;
+	close;
+	
+	case 2:
+	input .@czamt;
+	if(.@czamt == 0) { close; }
+	next;
+	mes "[ Money Changer ]";
+	if(Zeny < .@czamt){
+		mes "Not enough Zeny!";
+		close; }
+	mes "Converting "+.@czamt+"z to "+.@czamt/10000+" cash. Continue?";
+	if(select("No:Yes") == 1) { close; }
+	next;
+	mes "[ Money Changer ]";
+	mes "Done!";
+	set #CASHPOINTS,#CASHPOINTS+.@czamt/10000;
+	set Zeny,Zeny-.@czamt;
+	close; }
 }
