@@ -53,6 +53,7 @@ function HasjROCostume {
 		// Uncomment lines below to enable certain job when their respective jRO costume is released and you patched the sprite in your client.
 		case Job_Sorcerer:
 		case Job_Sura:
+		case job_Shadow_Chaser:
 		case Job_Rune_Knight:
 			return 1;
 		default:
