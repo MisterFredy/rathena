@@ -53,29 +53,29 @@ Body:
         Options:
           - Option: VAR_STRAMOUNT
             MinValue: 1
-            MaxValue: 5
+            MaxValue: 10
             Chance: 5000
           - Option: VAR_AGIAMOUNT
             MinValue: 1
-            MaxValue: 5
+            MaxValue: 10
             Chance: 5000
           - Option: VAR_VITAMOUNT
             MinValue: 1
-            MaxValue: 5
+            MaxValue: 10
             Chance: 5000
           - Option: VAR_INTAMOUNT
             MinValue: 1
-            MaxValue: 5
+            MaxValue: 10
             Chance: 5000
           - Option: VAR_DEXAMOUNT
             MinValue: 1
-            MaxValue: 5
+            MaxValue: 10
             Chance: 5000
           - Option: VAR_LUKAMOUNT
             MinValue: 1
-            MaxValue: 5
+            MaxValue: 10
             Chance: 5000
-    MaxRandom: 0 # These are listed but the group only has 1 slot max
+    MaxRandom: 4 # These are listed but the group only has 1 slot max
     Random:
       - Option: VAR_MAXHPAMOUNT
         MinValue: 50
@@ -398,18 +398,54 @@ Body:
     Slots:
       - Slot: 1
         Options:
-          - Option: VAR_MAXHPAMOUNT
+          - Option: VAR_DEXAMOUNT
             MinValue: 1
             MaxValue: 10
-            Chance: 2000
-          - Option: VAR_MAXSPAMOUNT
+            Chance: 2500
+          - Option: VAR_INTAMOUNT
             MinValue: 1
             MaxValue: 10
-            Chance: 2000
+            Chance: 2500
           - Option: VAR_STRAMOUNT
             MinValue: 1
             MaxValue: 10
+            Chance: 2500
+          - Option: VAR_ATTPOWER
+            MinValue: 10
+            MaxValue: 50
             Chance: 2000
+          - Option: VAR_CRITICALSUCCESSVALUE
+            MinValue: 1
+            MaxValue: 15
+            Chance: 1000
+          - Option: DAMAGE_CRI_TARGET
+            MinValue: 1
+            MaxValue: 20
+            Chance: 1000
+          - Option: VAR_AGIAMOUNT
+            MinValue: 1
+            MaxValue: 10
+            Chance: 400
+          - Option: RANGE_ATTACK_DAMAGE_TARGET
+            MinValue: 1
+            MaxValue: 15
+            Chance: 2000
+          - Option: RANGE_ATTACK_DAMAGE_TARGET
+            MinValue: 15
+            MaxValue: 20
+            Chance: 900
+          - Option: VAR_PLUSASPD
+            MinValue: 1
+            MaxValue: 5
+            Chance: 1000
+          - Option: VAR_MAGICATKPERCENT
+            MinValue: 1
+            MaxValue: 5
+            Chance: 1000
+          - Option: VAR_VITAMOUNT
+            MinValue: 1
+            MaxValue: 10
+            Chance: 2500
       - Slot: 2
         Options:
           - Option: ATTR_TOLERACE_WATER
@@ -424,6 +460,14 @@ Body:
             MinValue: 1
             MaxValue: 10
             Chance: 2000
+          - Option: VAR_ITEMDEFPOWER
+            MinValue: 10
+            MaxValue: 20
+            Chance: 100
+          - Option: VAR_ITEMDEFPOWER
+            MinValue: 30
+            MaxValue: 30
+            Chance: 800
       - Slot: 3
         Options:
           - Option: DAMAGE_PROPERTY_GROUND_USER
@@ -6893,27 +6937,27 @@ Body:
         Options:
           - Option: VAR_STRAMOUNT
             MinValue: 1
-            MaxValue: 3
+            MaxValue: 10
             Chance: 8000
           - Option: VAR_AGIAMOUNT
             MinValue: 1
-            MaxValue: 3
+            MaxValue: 10
             Chance: 8000
           - Option: VAR_VITAMOUNT
             MinValue: 1
-            MaxValue: 3
+            MaxValue: 10
             Chance: 8000
           - Option: VAR_INTAMOUNT
             MinValue: 1
-            MaxValue: 3
+            MaxValue: 10
             Chance: 8000
           - Option: VAR_DEXAMOUNT
             MinValue: 1
-            MaxValue: 3
+            MaxValue: 10
             Chance: 8000
           - Option: VAR_LUKAMOUNT
             MinValue: 1
-            MaxValue: 3
+            MaxValue: 10
             Chance: 8000
           - Option: VAR_MAXHPAMOUNT
             MinValue: 1
@@ -6955,7 +6999,7 @@ Body:
     Random:
       - Option: VAR_ATKPERCENT
         MinValue: 3
-        MaxValue: 5
+        MaxValue: 8
         Chance: 90
       - Option: VAR_MAGICATKPERCENT
         MinValue: 3
